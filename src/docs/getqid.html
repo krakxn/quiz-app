@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            padding-left: 40px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .response-example {
+            max-width: 600px;
+            padding-left: 80px;
+        }
+
+        .code-block pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GET /quiz-app/questions/:id</h1>
+    <hr>
+    <div class="response-example">
+        <h2>Example responses</h2>
+        <h4>Successful response</h4>
+        <div class="code-block">
+            <pre>
+                {
+                    questionType.key
+                }
+            </pre>
+        </div>
+        <h4>Unsuccessful response</h4>
+        <div class="code-block">
+            <pre>
+                {
+                    ERROR 404: Question type not found
+                }
+            </pre>
+        </div>
+    </div>
+
+    <br>
+
+    <hr>
+
+    <h2 style="padding-left: 80px;">Response fields</h2>
+
+    <table style="padding-left:80px;">
+        <thead>
+            <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 50px;">Type</th>
+                <th style="width: 200px;">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>int</td>
+                <td style="word-wrap: break-word;">key of the question</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+    
+</body>
+</html>
