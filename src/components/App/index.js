@@ -20,8 +20,8 @@ const App = () => {
   const startQuiz = (data, countdownTime) => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Loading your quiz...',
-      message: "It won't be long!",
+      title: 'The ultimate quiz is being loaded...',
+      message: "Are you ready?",
     });
     setCountdownTime(countdownTime);
 
@@ -35,8 +35,8 @@ const App = () => {
   const endQuiz = resultData => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Fetching your results...',
-      message: 'Just a moment!',
+      title: 'The results for the definite trivia are being fetched...',
+      message: 'But have you done well?',
     });
 
     setTimeout(() => {
@@ -50,8 +50,8 @@ const App = () => {
   const replayQuiz = () => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Getting ready for round two.',
-      message: "It won't take long!",
+      title: 'Preparing for yet another round...',
+      message: "Be prepared!",
     });
 
     const shuffledData = shuffle(data);
@@ -72,8 +72,8 @@ const App = () => {
   const resetQuiz = () => {
     setLoading(true);
     setLoadingMessage({
-      title: 'Loading the home screen.',
-      message: 'Thank you for playing!',
+      title: 'The home screen is being loaded...',
+      message: 'Thank you very much for partaking in this trivia!',
     });
 
     setTimeout(() => {

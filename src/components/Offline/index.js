@@ -11,8 +11,7 @@ const Offline = () => {
           <Icon name="unlink" />
           <h1>Offline</h1>
           <p>
-            There is no Internet connection. We'll try to reload automatically
-            once you're back online!{' '}
+            Oh no! There is no Internet connection... once back online, to be refreshed automatically!  {' '}
             <span role="img" aria-label="signal">
               📶
             </span>

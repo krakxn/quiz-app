@@ -46,7 +46,7 @@ const CATEGORIES = [
   },
   {
     key: 17,
-    text: 'Science & Nature',
+    text: 'Science: Nature',
     value: 17,
   },
   {
@@ -101,7 +101,7 @@ const CATEGORIES = [
   },
   {
     key: 28,
-    text: 'Vehicles',
+    text: 'Automobiles',
     value: 28,
   },
   {

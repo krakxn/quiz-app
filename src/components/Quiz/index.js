@@ -80,7 +80,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
                   <Header as="h1" block floated="left">
                     <Icon name="info circle" />
                     <Header.Content>
-                      {`Question No.${questionIndex + 1} of ${data.length}`}
+                      {`Question ${questionIndex + 1} of ${data.length}`}
                     </Header.Content>
                   </Header>
                   <Countdown
@@ -121,8 +121,9 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
                 <Divider />
                 <Item.Extra>
                   <Button
-                    primary
+                    
                     content="Next"
+                    color='black'
                     onClick={handleNext}
                     floated="right"
                     size="big"

@@ -68,11 +68,11 @@ const Main = ({ startQuiz }) => {
           if (response_code === 1) {
             const message = (
               <p>
-                The API doesn't have enough questions for your query. (Ex.
-                Asking for 50 Questions in a Category that only has 20.)
+                The API has insufficient questions for your query. (Ex.
+                Requesting for 50 Questions in a Category that only has 25.)
                 <br />
                 <br />
-                Please change the <strong>No. of Questions</strong>,{' '}
+                Please change the <strong>Number of Questions</strong>,{' '}
                 <strong>Difficulty Level</strong>, or{' '}
                 <strong>Type of Questions</strong>.
               </p>
@@ -117,20 +117,20 @@ const Main = ({ startQuiz }) => {
       <Segment>
         <Item.Group divided>
           <Item>
-            <Item.Image src={mindImg} />
+            <Item.Image src={mindImg}/>
             <Item.Content>
               <Item.Header>
-                <h1>The Ultimate Trivia Quiz</h1>
+                <h1>Select your preferences for the ultimate quiz!</h1>
               </Item.Header>
               {error && (
                 <Message error onDismiss={() => setError(null)}>
-                  <Message.Header>Error!</Message.Header>
+                  <Message.Header>Error...</Message.Header>
                   {error.message}
                 </Message>
               )}
               <Divider />
               <Item.Meta>
-                <p>In which category do you want to play the quiz?</p>
+                <p>What category would you like to partake in?</p>
                 <Dropdown
                   fluid
                   selection
@@ -143,20 +143,20 @@ const Main = ({ startQuiz }) => {
                   disabled={processing}
                 />
                 <br />
-                <p>How many questions do you want in your quiz?</p>
+                <p>What amount of questions do you prefer?</p>
                 <Dropdown
                   fluid
                   selection
                   name="numOfQ"
-                  placeholder="Select No. of Questions"
-                  header="Select No. of Questions"
+                  placeholder="Select The Number of Questions"
+                  header="Select The Number of Questions"
                   options={NUM_OF_QUESTIONS}
                   value={numOfQuestions}
                   onChange={(e, { value }) => setNumOfQuestions(value)}
                   disabled={processing}
                 />
                 <br />
-                <p>How difficult do you want your quiz to be?</p>
+                <p>How difficult do you want your quiz?</p>
                 <Dropdown
                   fluid
                   selection
@@ -169,7 +169,7 @@ const Main = ({ startQuiz }) => {
                   disabled={processing}
                 />
                 <br />
-                <p>Which type of questions do you want in your quiz?</p>
+                <p>Which type of questions do you want?</p>
                 <Dropdown
                   fluid
                   selection
@@ -182,7 +182,7 @@ const Main = ({ startQuiz }) => {
                   disabled={processing}
                 />
                 <br />
-                <p>Please select the countdown time for your quiz.</p>
+                <p>Please select the alotted time.</p>
                 <Dropdown
                   search
                   selection
@@ -220,11 +220,11 @@ const Main = ({ startQuiz }) => {
               <Divider />
               <Item.Extra>
                 <Button
-                  primary
                   size="big"
+                  color="black"
                   icon="play"
                   labelPosition="left"
-                  content={processing ? 'Processing...' : 'Play Now'}
+                  content={processing ? 'Processing...' : 'Are you ready?'}
                   onClick={fetchData}
                   disabled={!allFieldsSelected || processing}
                 />

@@ -42,7 +42,7 @@ const Stats = ({
       </Header>
       <div style={{ marginTop: 35 }}>
         <Button
-          primary
+          color="black"
           content="Play Again"
           onClick={replayQuiz}
           size="big"
@@ -51,7 +51,7 @@ const Stats = ({
           style={{ marginRight: 15, marginBottom: 8 }}
         />
         <Button
-          color="teal"
+          color="black"
           content="Back to Home"
           onClick={resetQuiz}
           size="big"

@@ -21,9 +21,9 @@ const Countdown = ({ countdownTime, timeOver, setTimeTaken }) => {
 
         Swal.fire({
           icon: 'info',
-          title: `Oops! Time's up.`,
-          text: 'See how you did!',
-          confirmButtonText: 'Check Results',
+          title: `Oh no... the time is up!`,
+          text: 'How did you do?',
+          confirmButtonText: 'Check results',
           timer: 5000,
           willClose: () => timeOver(totalTime - timerTime),
         });

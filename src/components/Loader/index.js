@@ -7,7 +7,7 @@ const Loader = ({ title, message }) => (
       <Icon name="circle notched" loading />
       <Message.Content>
         <Message.Header>{title ? title : 'Just one second'}</Message.Header>
-        {message ? message : 'We are fetching that content for you.'}
+        {message ? message : 'The content you requested is being fetched...'}
       </Message.Content>
     </Message>
   </Container>
