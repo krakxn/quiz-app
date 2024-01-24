@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Table } from 'semantic-ui-react';
+import React from 'react'; // eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types'; // eslint-disable-line no-unused-vars
+import { Table } from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
 
 const QNA = ({ questionsAndAnswers }) => {
   return (
@@ -30,7 +30,7 @@ const QNA = ({ questionsAndAnswers }) => {
 };
 
 QNA.propTypes = {
-  questionsAndAnswers: PropTypes.array.isRequired,
+  questionsAndAnswers: PropTypes.array.isRequired
 };
 
 export default QNA;

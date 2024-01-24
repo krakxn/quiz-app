@@ -50,7 +50,7 @@ const calculateGrade = score => {
 
   return {
     grade,
-    remarks,
+    remarks
   };
 };
 

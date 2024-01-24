@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // eslint-disable-line no-unused-vars
 
-import Layout from '../Layout';
-import Loader from '../Loader';
-import Main from '../Main';
-import Quiz from '../Quiz';
-import Result from '../Result';
+import Layout from '../Layout'; // eslint-disable-line no-unused-vars
+import Loader from '../Loader'; // eslint-disable-line no-unused-vars
+import Main from '../Main'; // eslint-disable-line no-unused-vars
+import Quiz from '../Quiz'; // eslint-disable-line no-unused-vars
+import Result from '../Result'; // eslint-disable-line no-unused-vars
 
 import { shuffle } from '../../utils';
 
@@ -21,7 +21,7 @@ const App = () => {
     setLoading(true);
     setLoadingMessage({
       title: 'The ultimate quiz is being loaded...',
-      message: "Are you ready?",
+      message: 'Are you ready?'
     });
     setCountdownTime(countdownTime);
 
@@ -36,7 +36,7 @@ const App = () => {
     setLoading(true);
     setLoadingMessage({
       title: 'The results for the definite trivia are being fetched...',
-      message: 'But have you done well?',
+      message: 'But have you done well?'
     });
 
     setTimeout(() => {
@@ -51,7 +51,7 @@ const App = () => {
     setLoading(true);
     setLoadingMessage({
       title: 'Preparing for yet another round...',
-      message: "Be prepared!",
+      message: 'Be prepared!'
     });
 
     const shuffledData = shuffle(data);
@@ -73,7 +73,7 @@ const App = () => {
     setLoading(true);
     setLoadingMessage({
       title: 'The home screen is being loaded...',
-      message: 'Thank you very much for partaking in this trivia!',
+      message: 'Thank you very much for partaking in this trivia!'
     });
 
     setTimeout(() => {

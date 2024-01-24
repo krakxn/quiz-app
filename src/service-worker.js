@@ -6,11 +6,13 @@ import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
 
+const self = this;
+
 clientsClaim();
 
 precacheAndRoute(self.__WB_MANIFEST);
 
-const fileExtensionRegexp = new RegExp('/[^/?]+\\.[^/]+$');
+const fileExtensionRegexp = /[^/?]+\.[^/]+$/;
 registerRoute(({ request, url }) => {
   if (request.mode !== 'navigate') {
     return false;

@@ -2,15 +2,17 @@ import {
   timeConverter,
   calculateGrade,
   getLetter,
-  calculateScore,
+  calculateScore
 } from '../utils';
+
+import { describe, it, expect } from '@jest/globals';
 
 describe('timeConverter', () => {
   it('returns hours, minutes and seconds on valid input', () => {
     expect(timeConverter(1000 * 60)).toMatchObject({
       hours: '00',
       minutes: '01',
-      seconds: '00',
+      seconds: '00'
     });
   });
 
@@ -23,29 +25,29 @@ describe('calculateGrade', () => {
   it('returns A+ and you pass for any grade >= 97 on valid input', () => {
     expect(calculateGrade(97)).toMatchObject({
       grade: 'A+',
-      remarks: `Outstanding! You've mastered this quiz. Well done!`,
+      remarks: 'Outstanding! You\'ve mastered this quiz. Well done!'
     });
   });
 
   it('returns A and you pass for any grade >= 93 <= 96 on valid input', () => {
     expect(calculateGrade(96)).toMatchObject({
       grade: 'A',
-      remarks: `Outstanding! You've mastered this quiz. Well done!`,
+      remarks: 'Outstanding! You\'ve mastered this quiz. Well done!'
     });
     expect(calculateGrade(93)).toMatchObject({
       grade: 'A',
-      remarks: `Outstanding! You've mastered this quiz. Well done!`,
+      remarks: 'Outstanding! You\'ve mastered this quiz. Well done!'
     });
   });
 
   it('returns A- and you pass for any grade >= 90 <= 92 on valid input', () => {
     expect(calculateGrade(90)).toMatchObject({
       grade: 'A-',
-      remarks: `Outstanding! You've mastered this quiz. Well done!`,
+      remarks: 'Outstanding! You\'ve mastered this quiz. Well done!'
     });
     expect(calculateGrade(92)).toMatchObject({
       grade: 'A-',
-      remarks: `Outstanding! You've mastered this quiz. Well done!`,
+      remarks: 'Outstanding! You\'ve mastered this quiz. Well done!'
     });
   });
 

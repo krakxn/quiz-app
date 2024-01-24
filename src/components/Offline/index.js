@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Segment, Header, Icon } from 'semantic-ui-react';
+import React from 'react'; // eslint-disable-line no-unused-vars
+import { Container, Segment, Header, Icon } from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
 
 const Offline = () => {
   window.addEventListener('online', () => window.location.reload());

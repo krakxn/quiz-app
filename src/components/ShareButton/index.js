@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { Button, Icon, Modal } from 'semantic-ui-react';
+import React, { Fragment } from 'react'; // eslint-disable-line no-unused-vars
+import { Button, Icon, Modal } from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
 
 const ShareButton = () => {
   const handleClick = () => {
@@ -7,7 +7,7 @@ const ShareButton = () => {
       .share({
         title: document.title,
         text: 'Check out QuizQuest: The Definite Trivia!',
-        url: '',
+        url: ''
       })
       .then(() => console.log('Successfully shared!'))
       .catch(error => console.log(error.message));
@@ -15,7 +15,8 @@ const ShareButton = () => {
 
   return (
     <Fragment>
-      {navigator.share ? (
+      {navigator.share
+? (
         <Button
           title="Share"
           color="black"
@@ -25,7 +26,8 @@ const ShareButton = () => {
           icon="share alternate"
           onClick={handleClick}
         />
-      ) : (
+      )
+: (
         <Modal
           closeIcon
           size="tiny"

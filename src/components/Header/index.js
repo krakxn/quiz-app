@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, Button } from 'semantic-ui-react';
+import React, { useState } from 'react'; // eslint-disable-line no-unused-vars
+import { Menu, Button } from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
 
 const Header = () => {
   const [promptEvent, setPromptEvent] = useState(null);

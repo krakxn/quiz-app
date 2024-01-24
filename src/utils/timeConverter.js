@@ -14,7 +14,7 @@ const timeConverter = milliseconds => {
   return {
     hours,
     minutes,
-    seconds,
+    seconds
   };
 };
 

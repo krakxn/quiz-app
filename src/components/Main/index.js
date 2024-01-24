@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react'; // eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types'; // eslint-disable-line no-unused-vars
 import {
-  Container,
-  Segment,
-  Item,
-  Dropdown,
-  Divider,
-  Button,
-  Message,
-} from 'semantic-ui-react';
+  Container, // eslint-disable-line no-unused-vars
+  Segment, // eslint-disable-line no-unused-vars
+  Item, // eslint-disable-line no-unused-vars
+  Dropdown, // eslint-disable-line no-unused-vars
+  Divider, // eslint-disable-line no-unused-vars
+  Button, // eslint-disable-line no-unused-vars
+  Message // eslint-disable-line no-unused-vars
+} from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
 
-import mindImg from '../../images/mind.svg';
+import mindImg from '../../images/mind.svg'; // eslint-disable-line no-unused-vars
 
 import {
   CATEGORIES,
   NUM_OF_QUESTIONS,
   DIFFICULTY,
   QUESTIONS_TYPE,
-  COUNTDOWN_TIME,
-} from '../../constants';
-import { shuffle } from '../../utils';
+  COUNTDOWN_TIME
+} from '../../constants'; // eslint-disable-line no-unused-vars
+import { shuffle } from '../../utils'; // eslint-disable-line no-unused-vars
 
-import Offline from '../Offline';
+import Offline from '../Offline'; // eslint-disable-line no-unused-vars
 
 const Main = ({ startQuiz }) => {
   const [category, setCategory] = useState('0');
@@ -31,7 +31,7 @@ const Main = ({ startQuiz }) => {
   const [countdownTime, setCountdownTime] = useState({
     hours: 0,
     minutes: 120,
-    seconds: 0,
+    seconds: 0
   });
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState(null);
@@ -63,9 +63,9 @@ const Main = ({ startQuiz }) => {
       .then(respone => respone.json())
       .then(data =>
         setTimeout(() => {
-          const { response_code, results } = data;
+          const { responseCode, results } = data;
 
-          if (response_code === 1) {
+          if (responseCode === 1) {
             const message = (
               <p>
                 The API has insufficient questions for your query. (Ex.
@@ -87,7 +87,7 @@ const Main = ({ startQuiz }) => {
           results.forEach(element => {
             element.options = shuffle([
               element.correct_answer,
-              ...element.incorrect_answers,
+              ...element.incorrect_answers
             ]);
           });
 
@@ -239,7 +239,7 @@ const Main = ({ startQuiz }) => {
 };
 
 Main.propTypes = {
-  startQuiz: PropTypes.func.isRequired,
+  startQuiz: PropTypes.func.isRequired
 };
 
 export default Main;

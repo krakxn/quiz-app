@@ -2,7 +2,7 @@ import ShareButtonComponent from './index';
 
 export default {
   title: 'Components/ShareButton',
-  component: ShareButtonComponent,
+  component: ShareButtonComponent
 };
 
 export const ShareButton = {};

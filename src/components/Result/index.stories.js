@@ -3,7 +3,7 @@ import data from './mockData.json';
 
 export default {
   title: 'Components/Result',
-  component: ResultComponent,
+  component: ResultComponent
 };
 
 const Template = args => <ResultComponent {...args} />;
@@ -15,5 +15,5 @@ Result.args = {
   timeTaken: 100 * 1000,
   questionsAndAnswers: data,
   replayQuiz: () => {},
-  resetQuiz: () => {},
+  resetQuiz: () => {}
 };

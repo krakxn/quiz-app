@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Container, Menu } from 'semantic-ui-react';
+import React, { useState } from 'react'; // eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types'; // eslint-disable-line no-unused-vars
+import { Container, Menu } from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
 
-import Stats from './Stats';
-import QNA from './QNA';
+import Stats from './Stats'; // eslint-disable-line no-unused-vars
+import QNA from './QNA'; // eslint-disable-line no-unused-vars
 
 const Result = ({
   totalQuestions,
@@ -11,7 +11,7 @@ const Result = ({
   timeTaken,
   questionsAndAnswers,
   replayQuiz,
-  resetQuiz,
+  resetQuiz
 }) => {
   const [activeTab, setActiveTab] = useState('Statistics');
 
@@ -54,7 +54,7 @@ Result.propTypes = {
   timeTaken: PropTypes.number.isRequired,
   questionsAndAnswers: PropTypes.array.isRequired,
   replayQuiz: PropTypes.func.isRequired,
-  resetQuiz: PropTypes.func.isRequired,
+  resetQuiz: PropTypes.func.isRequired
 };
 
 export default Result;

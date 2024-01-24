@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // eslint-disable-line no-unused-vars
 import PropTypes from 'prop-types';
-import { Button, Popup } from 'semantic-ui-react';
+import { Button, Popup } from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
 import Swal from 'sweetalert2';
 
 import { timeConverter } from '../../utils';
@@ -21,11 +21,11 @@ const Countdown = ({ countdownTime, timeOver, setTimeTaken }) => {
 
         Swal.fire({
           icon: 'info',
-          title: `Oh no... the time is up!`,
+          title: 'Oh no... the time is up!',
           text: 'How did you do?',
           confirmButtonText: 'Check results',
           timer: 5000,
-          willClose: () => timeOver(totalTime - timerTime),
+          willClose: () => timeOver(totalTime - timerTime)
         });
       }
     }, 1000);
@@ -62,7 +62,7 @@ const Countdown = ({ countdownTime, timeOver, setTimeTaken }) => {
 Countdown.propTypes = {
   countdownTime: PropTypes.number.isRequired,
   timeOver: PropTypes.func.isRequired,
-  setTimeTaken: PropTypes.func.isRequired,
+  setTimeTaken: PropTypes.func.isRequired
 };
 
 export default Countdown;

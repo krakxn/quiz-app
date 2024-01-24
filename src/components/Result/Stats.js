@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Segment, Header, Button } from 'semantic-ui-react';
+import React from 'react'; // eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types'; // eslint-disable-line no-unused-vars
+import { Segment, Header, Button } from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
 
-import ShareButton from '../ShareButton';
-import { calculateScore, calculateGrade, timeConverter } from '../../utils';
+import ShareButton from '../ShareButton'; // eslint-disable-line no-unused-vars
+import { calculateScore, calculateGrade, timeConverter } from '../../utils'; // eslint-disable-line no-unused-vars
 
 const Stats = ({
   totalQuestions,
   correctAnswers,
   timeTaken,
   replayQuiz,
-  resetQuiz,
+  resetQuiz
 }) => {
   const score = calculateScore(totalQuestions, correctAnswers);
   const { grade, remarks } = calculateGrade(score);
@@ -70,7 +70,7 @@ Stats.propTypes = {
   correctAnswers: PropTypes.number.isRequired,
   timeTaken: PropTypes.number.isRequired,
   replayQuiz: PropTypes.func.isRequired,
-  resetQuiz: PropTypes.func.isRequired,
+  resetQuiz: PropTypes.func.isRequired
 };
 
 export default Stats;

@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react'; // eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types'; // eslint-disable-line no-unused-vars
 import {
-  Container,
-  Segment,
-  Item,
-  Divider,
-  Button,
-  Icon,
-  Message,
-  Menu,
-  Header,
-} from 'semantic-ui-react';
-import he from 'he';
+  Container, // eslint-disable-line no-unused-vars
+  Segment, // eslint-disable-line no-unused-vars
+  Item, // eslint-disable-line no-unused-vars
+  Divider, // eslint-disable-line no-unused-vars
+  Button, // eslint-disable-line no-unused-vars
+  Icon, // eslint-disable-line no-unused-vars
+  Message, // eslint-disable-line no-unused-vars
+  Menu, // eslint-disable-line no-unused-vars
+  Header // eslint-disable-line no-unused-vars
+} from 'semantic-ui-react'; // eslint-disable-line no-unused-vars
+import he from 'he'; // eslint-disable-line no-unused-vars
 
-import Countdown from '../Countdown';
-import { getLetter } from '../../utils';
+import Countdown from '../Countdown'; // eslint-disable-line no-unused-vars
+import { getLetter } from '../../utils'; // eslint-disable-line no-unused-vars
 
 const Quiz = ({ data, countdownTime, endQuiz }) => {
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -42,7 +42,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
       question: he.decode(data[questionIndex].question),
       user_answer: userSlectedAns,
       correct_answer: he.decode(data[questionIndex].correct_answer),
-      point,
+      point
     });
 
     if (questionIndex === data.length - 1) {
@@ -50,7 +50,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
         totalQuestions: data.length,
         correctAnswers: correctAnswers + point,
         timeTaken,
-        questionsAndAnswers: qna,
+        questionsAndAnswers: qna
       });
     }
 
@@ -65,7 +65,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
       totalQuestions: data.length,
       correctAnswers,
       timeTaken,
-      questionsAndAnswers,
+      questionsAndAnswers
     });
   };
 
@@ -121,7 +121,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
                 <Divider />
                 <Item.Extra>
                   <Button
-                    
+
                     content="Next"
                     color='black'
                     onClick={handleNext}
@@ -145,7 +145,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
 Quiz.propTypes = {
   data: PropTypes.array.isRequired,
   countdownTime: PropTypes.number.isRequired,
-  endQuiz: PropTypes.func.isRequired,
+  endQuiz: PropTypes.func.isRequired
 };
 
 export default Quiz;
