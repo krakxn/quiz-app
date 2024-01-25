@@ -27,3 +27,5 @@ API documentation can be found in `doc.html`.
 - Jest test cases as specified above
 - Documentation of API as specified above
 - Video presentation on Panopto
+- `.github` for workflows
+- `.storybook` for content
