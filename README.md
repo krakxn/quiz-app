@@ -10,7 +10,7 @@ API documentation can be found in `doc.html`.
 ## Running the Application
 - Run `npm start` to start the server and the web application.
 - Run `npm run pretest` for ESLint test.
-- Run `npm test` for collective test.
+- Press `a` to run all tests after running `npm test`.
 - If not, both test files can be tested separately.
 - Run `npm install` to install necessary dependencies.
 
