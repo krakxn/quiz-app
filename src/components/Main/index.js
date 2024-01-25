@@ -182,7 +182,7 @@ const Main = ({ startQuiz }) => {
                   disabled={processing}
                 />
                 <br />
-                <p>Please select the alotted time.</p>
+                <p>Please select the time you want to be allotted.</p>
                 <Dropdown
                   search
                   selection

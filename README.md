@@ -17,7 +17,10 @@ API documentation can be found in `doc.html`.
 ## Miscellaneous Features
 - Responsive to different viewport sizes (Refer: Front-end code).
 - Properly handles server disconnection (Refer: `src/components/Offline`).
-- REST API provides each entity pertaining to the quiz with appropriate GET/POST methods.
+- REST API provides each entity pertaining to the quiz with appropriate GET/POST methods such as listing and individual details.
+- Minimalistic UI with asynchronous for an immersive UX.
+- Content loaded as JSON via AJAX
+- Responses provided and tested as JSON
 - Some React components are used for a seamless front-end experience.
 
 ## Submission Items
