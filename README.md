@@ -19,3 +19,11 @@ API documentation can be found in `doc.html`.
 - Properly handles server disconnection (Refer: `src/components/Offline`).
 - REST API provides each entity pertaining to the quiz with appropriate GET/POST methods.
 - Some React components are used for a seamless front-end experience.
+
+## Submission Items
+- All source code, client and server, in `src`
+- `package.json` includes `test` and `pretest`
+- `.eslintrc` with the recommended settings
+- Jest test cases as specified above
+- Documentation of API as specified above
+- Video presentation on Panopto
