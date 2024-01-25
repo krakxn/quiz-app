@@ -126,4 +126,4 @@ const CATEGORIES = [
   }
 ];
 
-export default CATEGORIES;
+module.exports = CATEGORIES;

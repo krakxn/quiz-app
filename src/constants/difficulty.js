@@ -21,4 +21,4 @@ const DIFFICULTY = [
   }
 ];
 
-export default DIFFICULTY;
+module.exports = DIFFICULTY;

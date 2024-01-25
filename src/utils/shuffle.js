@@ -9,4 +9,4 @@ const shuffle = array => {
   return array;
 };
 
-export default shuffle;
+module.exports = shuffle;

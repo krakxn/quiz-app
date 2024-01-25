@@ -1,33 +1,11 @@
-import express from 'express';
-// import swaggerUi from 'swagger-ui-express';
-// import swaggerJsdoc from 'swagger-jsdoc';
-import bodyParser from 'body-parser'; // eslint-disable-line no-unused-vars
-import CATEGORIES from '.constants/categories.js';
+const express = require('express');
+const bodyParser = require('body-parser'); // eslint-disable-line no-unused-vars
+const CATEGORIES = require('./constants/categories.js');
+const QUESTIONS_TYPE = require('./constants/questionsType.js');
+const DIFFICULTY = require('./constants/difficulty.js');
 
 const app = express();
-const port = 3000;
-
-/* const options = {
-    definition: {
-      openapi: '3.0.0',
-      info: {
-        title: 'QuizQuest API',
-        version: '1.0.0',
-        description: 'A simple API for QuizQuest',
-      },
-      servers: [
-        {
-          url: 'http://localhost:3000',
-        },
-      ],
-    },
-    apis: ['./routes/*.js'],
-  };
-
-const swaggerSpec = swaggerJsdoc(options);
-
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec)); */
-
+const port = 3000; // eslint-disable-line no-unused-vars
 
 // http://localhost:3000/quiz-app
 
@@ -69,7 +47,7 @@ app.get('quiz-app/difficulty/:id', (req, res) => {
       const details = {
         key: difficulty.key,
         text: difficulty.text,
-        value: difficulty.value,
+        value: difficulty.value
       };
       res.send(details);
     } else {
@@ -89,7 +67,7 @@ app.get('quiz-app/questions', (req, res) => {
     });
     res.send(idNameList);
   });
-  
+
 app.get('quiz-app/questions/:id', (req, res) => {
     const id = req.params.id;
     const questionType = QUESTIONS_TYPE.find((item) => item.key === id);
@@ -97,7 +75,7 @@ app.get('quiz-app/questions/:id', (req, res) => {
       const details = {
         key: questionType.key,
         text: questionType.text,
-        value: questionType.value,
+        value: questionType.value
       };
       res.send(details);
     } else {
@@ -111,15 +89,13 @@ app.post('quiz-app/questions', (req, res) => {
     res.send('Question added successfully');
   });
 
-
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something broke! :(');
   });
 
 app.listen(3000, () => {
-  console.log(`QuizQuest listening at Port 3000`);
+  console.log('QuizQuest listening at Port 3000');
 });
 
-
-  
+module.exports = app;

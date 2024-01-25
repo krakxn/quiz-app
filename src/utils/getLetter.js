@@ -22,4 +22,4 @@ const getLetter = number => {
   return letter;
 };
 
-export default getLetter;
+module.exports = getLetter;

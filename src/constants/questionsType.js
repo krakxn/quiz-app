@@ -16,4 +16,4 @@ const QUESTIONS_TYPE = [
   }
 ];
 
-export default QUESTIONS_TYPE;
+module.exports = QUESTIONS_TYPE;

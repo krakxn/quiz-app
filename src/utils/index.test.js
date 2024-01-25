@@ -1,11 +1,9 @@
-import {
-  timeConverter,
-  calculateGrade,
-  getLetter,
-  calculateScore
-} from '../utils';
+const timeConverter = require('./timeConverter');
+const calculateGrade = require('./calculateGrade');
+const getLetter = require('./getLetter');
+const calculateScore = require('./calculateScore');
 
-import { describe, it, expect } from '@jest/globals';
+const { describe, it, expect } = require('@jest/globals');
 
 describe('timeConverter', () => {
   it('returns hours, minutes and seconds on valid input', () => {

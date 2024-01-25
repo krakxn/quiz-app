@@ -18,4 +18,4 @@ const timeConverter = milliseconds => {
   };
 };
 
-export default timeConverter;
+module.exports = timeConverter;
